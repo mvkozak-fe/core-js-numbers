@@ -49,8 +49,8 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -325,8 +325,8 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
@@ -354,8 +354,8 @@ function numberToStringInBase(number, base) {
  * @example:
  * 12345, 2    => '1.23e+4'
  */
-function toExponential(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toExponential(number, fractionDigits) {
+  return number.toExponential(fractionDigits);
 }
 
 /**
@@ -369,8 +369,8 @@ function toExponential(/* number, fractionDigits */) {
  * 12345, 2    => '12345.00'
  * 12.345, 1   => '12.3'
  */
-function toFixed(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toFixed(number, fractionDigits) {
+  return number.toFixed(fractionDigits);
 }
 
 /**
@@ -385,8 +385,8 @@ function toFixed(/* number, fractionDigits */) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  return number.toPrecision(precision);
 }
 
 /**
@@ -600,8 +600,8 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  return Math.hypot(a, b);
 }
 
 /**
@@ -617,8 +617,10 @@ function getHypotenuse(/* a, b */) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  return number < 0
+    ? Math.abs(Math.floor(number / 2))
+    : Math.abs(Math.ceil(number / 2));
 }
 
 module.exports = {
